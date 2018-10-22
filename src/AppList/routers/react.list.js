@@ -1,6 +1,6 @@
 import React from "react"
 import { List } from "antd-mobile"
-import configs from "../configs/esList"
+import configs from "../../configs/esList"
 
 import {
     withRouter
@@ -15,6 +15,13 @@ const ReactList = withRouter(({ history })=>(
                 {
                     configs.react.map(val=>(
                         <Item extra={val[1]} key={"react" + val[1]} arrow="horizontal" onClick={()=>history.push(val[2])}>{val[0]}</Item>
+                    ))
+                }
+            </List>                
+            <List renderHeader={() => 'Redux'}>
+                {
+                    configs.redux.map(val=>(
+                        <Item extra={val[1]} key={"redux" + val[1]} arrow="horizontal" onClick={()=>history.push(val[2])}>{val[0]}</Item>
                     ))
                 }
             </List>                

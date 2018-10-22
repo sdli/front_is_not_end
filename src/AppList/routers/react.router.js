@@ -1,13 +1,13 @@
 import React from "react";
 
 // react
-import setState from "./react/setState";
+import setState from "../react/setState";
 
 // react test
-import jest from "./react/jest";
+import jest from "../react/jest";
 
 // react immutable
-import immutable from "./react/immutable"
+import immutable from "../react/immutable"
 
 import { HashRouter, Route } from "react-router-dom";
 

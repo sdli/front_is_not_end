@@ -27,5 +27,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-app-rewire-svg-react-loader": "codebandits/react-app-rewire-svg-react-loader"
+  }
 }

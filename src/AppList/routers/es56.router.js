@@ -1,10 +1,10 @@
 import React from "react";
 
 // import es5 group
-import ES5_setTimeout from "./es5/settimeout";
+import ES5_setTimeout from "../es5/settimeout";
 
 // import es6 group
-import ES6_array from "./es6/array";
+import ES6_array from "../es6/array";
 import { HashRouter , Route } from "react-router-dom";
 
 const ES_router = ({match}) => (
