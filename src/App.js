@@ -14,9 +14,6 @@ class MainApp extends React.Component {
     };
   }
 
-  componentDidMount(){
-    console.log("生成1次")
-  }
   render() {
     return (
       <div style={this.state.fullScreen ? { position: 'fixed', height: '100%', width: '100%', top: 0 } : { height: "100%" }}>
