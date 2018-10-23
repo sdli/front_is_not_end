@@ -23,10 +23,6 @@ class MainApp extends React.Component {
     };
   }
 
-  componentDidMount(){
-    console.log("渲染了一次");
-  }
-
   render() {    
     return (
       <React.Fragment>
