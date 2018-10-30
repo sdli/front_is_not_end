@@ -26,20 +26,44 @@ try{
 let initState = 1;
 let text = "";
 const potAsyncLoop = (initState,cb)=>{
-    if(initState < 1000000){
-        potAsyncLoop(initState++,cb)
+    if(initState < 100000){
+        potAsyncLoop(initState,cb);
     }else{
         cb();
     }
 }
 
 try{
-    potAsyncLoop(1,()=>{console.log("finished:",initState)})
+    potAsyncLoop(initState,()=>{console.log("finished:",initState)})
 }catch(e){
     text = e.message;
 }
 
 
+const answer = `
+\`\`\`js
+let initState = 1;
+let text = "";
+const potAsyncLoop = (initState,cb)=>{
+    if(initState < 100000){
+        initState++; 
+        if(initState%1000==0){
+            setTimeout(()=>potAsyncLoop(initState,cb),0);
+        }else{
+            potAsyncLoop(initState,cb);
+        }
+    }else{
+        cb();
+    }
+}
+
+try{
+    potAsyncLoop(initState,()=>{console.log("finished:",initState)})
+}catch(e){
+    text = e.message;
+}
+\`\`\`
+`
 export default ()=>{
     return (
         <WingBlank>
@@ -54,6 +78,11 @@ export default ()=>{
                 text
             }</p>
             <p className="red">如何避免?</p>
+            <MD 
+                source={answer}
+                renderers={{code:CodeBlock}}
+            />
         </WingBlank>
     );
 }
+

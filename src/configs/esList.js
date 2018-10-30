@@ -1,7 +1,7 @@
 export default {
     es5: [
-        ["JS Events","事件","/es/es5/event"],
-        ["JS Closure","闭包","/es/es5/closure"],
+        ["JS Task","事件机制","/es/es5/event"],
+        ["Event Emitter","事件触发类","/es/es5/eventEmitter"],
     ],
     es6:[
         ["ES6 Array","数组","/es/es6/array"],
