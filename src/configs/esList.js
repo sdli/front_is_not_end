@@ -1,5 +1,6 @@
 export default {
     es5: [
+        ["JS variable","变量和函数提升","/es/es5/variable"],
         ["JS Task","事件机制","/es/es5/event"],
         ["Event Emitter","事件触发类","/es/es5/eventEmitter"],
     ],
