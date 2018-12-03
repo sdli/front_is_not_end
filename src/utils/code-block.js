@@ -20,7 +20,7 @@ class CodeBlock extends React.PureComponent {
     this.highlightCode()
   }
 
-  highlightCode() {
+  highlightCode =()=>{
     hljs.highlightBlock(this.codeEl)
   }
 
