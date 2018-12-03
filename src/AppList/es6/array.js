@@ -5,7 +5,8 @@ import CodeBlock from "../../utils/code-block"
 
 const code1 = `
 \`\`\`js
-var array = [1,[2,3,[4,5]]]
+var array = [1,[2,3,[4,5,[6]]]]；
+
 \`\`\`
 `;
 
@@ -20,7 +21,7 @@ export default ()=>{
                 source={code1}
                 renderers={{code: CodeBlock}}
             />
-            <h5>想出多个办法进行数组扁平化。</h5>
+            <h5>想出多个办法进行数组扁平化。输出：[1,2,3,4,5,6]</h5>
         </WingBlank>
     );
 }
