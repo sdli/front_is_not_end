@@ -5,6 +5,9 @@ import ES5_setTimeout from "../es5/settimeout";
 import ES5_eventEmitter from "../es5/eventEmitter";
 import ES5_variable from "../es5/var";
 
+// import css3 group
+import CSS3Checkbox from "../css3/checkbox"
+
 // import es6 group
 import ES6_array from "../es6/array";
 import { HashRouter , Route } from "react-router-dom";
@@ -20,6 +23,9 @@ const ES_router = ({match}) => (
 
         {/* es6 */}
         <Route path={`${match.path}/es6/array`} component={ES6_array} />
+
+        {/* css3 */}
+        <Route path={`${match.path}/css3/checkbox`} component={CSS3Checkbox} />
       </div>
     </HashRouter>
 );
