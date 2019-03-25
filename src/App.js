@@ -1,29 +1,29 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 // 图标
-import Logo from './assets/react_logo.svg'
-import DockerLogo from './assets/docker.svg'
-import NodejsLogo from './assets/nodejs.svg'
-import JSLogo from './assets/js.svg'
+import Logo from "./assets/react_logo.svg";
+import DockerLogo from "./assets/docker.svg";
+import NodejsLogo from "./assets/nodejs.svg";
+import JSLogo from "./assets/js.svg";
 
-import { TabBar}  from "antd-mobile"
+import { TabBar } from "antd-mobile";
 import EsList from "./AppList/routers/es56.list";
-import ReactList from "./AppList/routers/react.list"
-import NodeJsList from "./AppList/routers/nodejs.list"
-import DockerList from "./AppList/routers/docker.list"
+import ReactList from "./AppList/routers/react.list";
+import NodeJsList from "./AppList/routers/nodejs.list";
+import DockerList from "./AppList/routers/docker.list";
 
 class MainApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'ES56',
+      selectedTab: "ES56",
       hidden: false,
-      fullScreen: true,
+      fullScreen: true
     };
   }
 
-  render() {    
+  render() {
     return (
       <React.Fragment>
         <TabBar
@@ -45,10 +45,10 @@ class MainApp extends React.Component {
                 <JSLogo />
               </div>
             }
-            selected={this.state.selectedTab === 'ES56'}
+            selected={this.state.selectedTab === "ES56"}
             onPress={() => {
               this.setState({
-                selectedTab: 'ES56',
+                selectedTab: "ES56"
               });
             }}
             data-seed="logId"
@@ -68,10 +68,10 @@ class MainApp extends React.Component {
                 <Logo />
               </div>
             }
-            selected={this.state.selectedTab === 'React'}
+            selected={this.state.selectedTab === "React"}
             onPress={() => {
               this.setState({
-                selectedTab: 'React',
+                selectedTab: "React"
               });
             }}
             data-seed="logId1"
@@ -91,10 +91,10 @@ class MainApp extends React.Component {
                 <NodejsLogo />
               </div>
             }
-            selected={this.state.selectedTab === 'NodeJS'}
+            selected={this.state.selectedTab === "NodeJS"}
             onPress={() => {
               this.setState({
-                selectedTab: 'NodeJS',
+                selectedTab: "NodeJS"
               });
             }}
             data-seed="logId1"
@@ -114,10 +114,10 @@ class MainApp extends React.Component {
             }
             title="Docker/K8s"
             key="Docker"
-            selected={this.state.selectedTab === 'Docker'}
+            selected={this.state.selectedTab === "Docker"}
             onPress={() => {
               this.setState({
-                selectedTab: 'Docker',
+                selectedTab: "Docker"
               });
             }}
             data-seed="logId1"

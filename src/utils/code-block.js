@@ -1,27 +1,27 @@
-const React = require('react')
-const PropTypes = require('prop-types')
-const hljs = window.hljs
+const React = require("react");
+const PropTypes = require("prop-types");
+const hljs = window.hljs;
 
 class CodeBlock extends React.PureComponent {
   constructor(props) {
-    super(props)
-    this.setRef = this.setRef.bind(this)
+    super(props);
+    this.setRef = this.setRef.bind(this);
   }
 
   setRef(el) {
-    this.codeEl = el
+    this.codeEl = el;
   }
 
   componentDidMount() {
-    this.highlightCode()
+    this.highlightCode();
   }
 
   componentDidUpdate() {
-    this.highlightCode()
+    this.highlightCode();
   }
 
-  highlightCode =()=>{
-    hljs.highlightBlock(this.codeEl)
+  highlightCode() {
+    hljs.highlightBlock(this.codeEl);
   }
 
   render() {
@@ -31,17 +31,17 @@ class CodeBlock extends React.PureComponent {
           {this.props.value}
         </code>
       </pre>
-    )
+    );
   }
 }
 
 CodeBlock.defaultProps = {
-  language: ''
-}
+  language: ""
+};
 
 CodeBlock.propTypes = {
   value: PropTypes.string.isRequired,
   language: PropTypes.string
-}
+};
 
 export default CodeBlock;

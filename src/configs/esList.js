@@ -6,8 +6,9 @@ export default {
   ],
   es6: [
     ["ES6 Array", "数组", "/es/es6/array"],
-    ["ES6 Objec", "对象", "/es/es6/object"],
     ["ES6 Set", "Set结构", "/es/es6/set"],
+    ["ES6 Clone", "ES6克隆实现", "/es/es6/clone"],
+    ["ES6 Objec", "对象", "/es/es6/object"],
     ["ES6 Map", "Map结构", "/es/es6/map"],
     ["ES6 Arrow Function", "箭头函数", "/es/es6/arrow_function"]
   ],

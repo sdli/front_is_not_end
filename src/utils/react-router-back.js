@@ -5,7 +5,6 @@
 
 import React from "react";
 
-
 // 如果为app主页，则将主页设置为fixed属性
 const Page_Settings_ForFixed_App_Router = {
   position: "fixed",
@@ -22,7 +21,10 @@ export default (WrappedComponent, ifSPAMainPage) => {
       <div
         style={
           ifSPAMainPage
-            ? { ...Page_Settings_ForFixed_App_Router, display: isExact ? "block" : "none" }
+            ? {
+                ...Page_Settings_ForFixed_App_Router,
+                display: isExact ? "block" : "none"
+              }
             : { opacity: isExact ? 1 : 0 }
         }
       >
