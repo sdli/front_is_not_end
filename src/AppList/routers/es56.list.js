@@ -9,7 +9,7 @@ const Item = List.Item;
 const ESList = withRouter(({ history }) => (
   <React.Fragment>
     <SearchBar className={style.fix_search} placeholder="输入关键词搜索" />
-    <div style={{ paddingTop: 50 }}>
+    <div style={{ paddingTop: 24 }}>
       <List renderHeader={() => "ES5"}>
         {configs.es5.map(val => (
           <Item
